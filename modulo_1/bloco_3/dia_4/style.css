@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+.header {
+  background-color: white;
+  margin: 0;
+}
+.main-title {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 20px;
+  font-family: "Architects Daughter", cursive;
+}
+
+.nav_page ul li {
+  display: inline-block;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+.nav_page ul {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.nav_page {
+  margin: 0;
+  background-color: rgb(32, 10, 32);
+  border-top: 2px solid rgb(51, 14, 51);
+}
+
+.nav_page a {
+  text-decoration: none;
+  margin-right: 45px;
+  color: white;
+  font-family: "Balsamiq Sans", cursive;
+  text-align: center;
+}
+
+.interesting_facts {
+  border: solid 10px rgb(77, 0, 0);
+  width: 80%;
+  margin-left: 5%;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.picture-stomatopoda {
+  width: 35%;
+  margin: 5px 15px 5px 5px;
+  float: left;
+}
+
+.interesting_facts p{
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    text-align: justify;
+    margin-right: 10px;
+}
+
+.secundary-title{
+    margin-left: 20px;
+    color: white;
+}
+
+.aside{
+    margin-top: 50px;
+}
+
+.aside a {
+    text-decoration: none;
+
+}
+
+.video{
+    color: white;
+}
+
+.video a {
+    text-decoration: none;
+    
+}
+
+.footer{
+    background-color: rgb(217, 217, 217);
+    font-family: "Architects Daughter", cursive;
+}
