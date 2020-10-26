@@ -10,5 +10,5 @@ for (let index = 0; index < numbers.length; index++) {
 if (impares > 0) {
   console.log(`Quantidade de impares = ${impares}`);
 } else {
-    console.log("nenhum valor ímpar encontrado");
+  console.log("nenhum valor ímpar encontrado");
 }
