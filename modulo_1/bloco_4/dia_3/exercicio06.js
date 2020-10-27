@@ -1,4 +1,4 @@
-n = 17;
+let n = 17;
 let resultado = 'é primo';
 
 if(n == 2){
