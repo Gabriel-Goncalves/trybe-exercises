@@ -95,6 +95,27 @@ function criaBotao(feriados) {
   divPai.appendChild(botao);
 }
 
+let toggle = 0;
+function mostraFeriados() {
+  let holidayDays = document.querySelectorAll(".holiday");
+  if (toggle === 0) {
+    for (let index = 0; index < holidayDays.length; index++) {
+      toggle = 1;
+      holidayDays[index].style.backgroundColor = "pink";
+    }
+  } else {
+    for (let index = 0; index < holidayDays.length; index++) {
+      for (let index = 0; index < holidayDays.length; index++) {
+        toggle = 0;
+        holidayDays[index].style.backgroundColor = "rgb(238,238,238)";
+      }
+    }
+  }
+}
+
 createDaysOfTheWeek();
 createDaysOfMonth();
 criaBotao();
+
+let botaoFeriados = document.querySelector("#btn-holiday");
+botaoFeriados.addEventListener('click', mostraFeriados);
