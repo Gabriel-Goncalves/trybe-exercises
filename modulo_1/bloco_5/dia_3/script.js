@@ -87,5 +87,14 @@ function createDaysOfMonth() {
   }
 }
 
+function criaBotao(feriados) {
+  let divPai = document.querySelector(".buttons-container");
+  let botao = document.createElement("button");
+  botao.id = "btn-holiday";
+  botao.innerText = "Feriados";
+  divPai.appendChild(botao);
+}
+
 createDaysOfTheWeek();
 createDaysOfMonth();
+criaBotao();
