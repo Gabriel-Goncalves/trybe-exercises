@@ -87,11 +87,11 @@ function createDaysOfMonth() {
   }
 }
 
-function criaBotao(feriados) {
+function criaBotaoFeriados(feriados) {
   let divPai = document.querySelector(".buttons-container");
   let botao = document.createElement("button");
   botao.id = "btn-holiday";
-  botao.innerText = "Feriados";
+  botao.innerText = feriados;
   divPai.appendChild(botao);
 }
 
@@ -113,9 +113,23 @@ function mostraFeriados() {
   }
 }
 
-createDaysOfTheWeek();
-createDaysOfMonth();
-criaBotao();
+function criaBotaoSexta(sexta) {
+  let divPai = document.querySelector(".buttons-container");
+  let botao = document.createElement("button");
+  botao.id = "btn-friday";
+  botao.innerText = sexta;
+  divPai.appendChild(botao);
+}
 
+createDaysOfTheWeek();
+createDaysOfMonth(); // exercicio 1
+criaBotaoFeriados("Feriados"); // exercicio 2
+
+// exercicio 3
 let botaoFeriados = document.querySelector("#btn-holiday");
-botaoFeriados.addEventListener('click', mostraFeriados);
+botaoFeriados.addEventListener("click", mostraFeriados);
+
+// exercicio 4
+criaBotaoSexta("Sexta-feira");
+
+// exercicio 5
