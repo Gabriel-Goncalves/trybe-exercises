@@ -95,18 +95,18 @@ function criaBotaoFeriados(feriados) {
   divPai.appendChild(botao);
 }
 
-let toggle = 0;
+let toggleFeriados = 0;
 function mostraFeriados() {
   let holidayDays = document.querySelectorAll(".holiday");
-  if (toggle === 0) {
+  if (toggleFeriados === 0) {
     for (let index = 0; index < holidayDays.length; index++) {
-      toggle = 1;
+      toggleFeriados = 1;
       holidayDays[index].style.backgroundColor = "pink";
     }
   } else {
     for (let index = 0; index < holidayDays.length; index++) {
       for (let index = 0; index < holidayDays.length; index++) {
-        toggle = 0;
+        toggleFeriados = 0;
         holidayDays[index].style.backgroundColor = "rgb(238,238,238)";
       }
     }
@@ -121,6 +121,26 @@ function criaBotaoSexta(sexta) {
   divPai.appendChild(botao);
 }
 
+let diasDeSexta = [4, 11, 18, 25]
+let toggleSexta = 0;
+function mostrarSexta() {
+  let fridayDays = document.querySelectorAll(".friday");
+  if (toggleSexta === 0) {
+    for (let index = 0; index < fridayDays.length; index++) {
+      toggleSexta = 1;
+      fridayDays[index].innerText = "Sextou!";
+    }
+  } else {
+    for (let index = 0; index < fridayDays.length; index++) {
+      for (let index = 0; index < fridayDays.length; index++) {
+        toggleSexta = 0;
+        fridayDays[index].innerText = diasDeSexta[index];
+      }
+    }
+  }
+}
+
+
 createDaysOfTheWeek();
 createDaysOfMonth(); // exercicio 1
 criaBotaoFeriados("Feriados"); // exercicio 2
@@ -133,3 +153,5 @@ botaoFeriados.addEventListener("click", mostraFeriados);
 criaBotaoSexta("Sexta-feira");
 
 // exercicio 5
+let botaoSexta = document.querySelector("#btn-friday");
+botaoSexta.addEventListener("click", mostrarSexta);
