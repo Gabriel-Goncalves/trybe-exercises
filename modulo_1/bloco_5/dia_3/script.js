@@ -121,7 +121,7 @@ function criaBotaoSexta(sexta) {
   divPai.appendChild(botao);
 }
 
-let diasDeSexta = [4, 11, 18, 25]
+let diasDeSexta = [4, 11, 18, 25];
 let toggleSexta = 0;
 function mostrarSexta(teste) {
   let fridayDays = document.querySelectorAll(".friday");
@@ -140,12 +140,19 @@ function mostrarSexta(teste) {
   }
 }
 
-function zoomIn(elemento){
-    elemento.target.style.fontSize = "1.8em";
+function zoomIn(elemento) {
+  elemento.target.style.fontSize = "1.8em";
 }
 
 function zoomOut(elemento) {
-    elemento.target.style.fontSize = "1em";
+  elemento.target.style.fontSize = "1em";
+}
+
+function adicionaTarefa(tarefa) {
+  let pai = document.querySelector("div.my-tasks");
+  let elemento = document.createElement("span");
+  elemento.innerText = tarefa;
+  pai.appendChild(elemento);
 }
 
 createDaysOfTheWeek();
@@ -163,9 +170,10 @@ criaBotaoSexta("Sexta-feira");
 let botaoSexta = document.querySelector("#btn-friday");
 botaoSexta.addEventListener("click", mostrarSexta);
 
-// exercicio 6   // finalizar
+// exercicio 6
 let dia = document.querySelector("#days");
 dia.addEventListener("mouseover", zoomIn);
 dia.addEventListener("mouseout", zoomOut);
 
-
+// exercicio 7
+adicionaTarefa("estudar");
