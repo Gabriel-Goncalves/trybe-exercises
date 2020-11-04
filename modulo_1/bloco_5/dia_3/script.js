@@ -155,6 +155,29 @@ function adicionaTarefa(tarefa) {
   pai.appendChild(elemento);
 }
 
+function adicionaLegenda(color) {
+  let pai = document.querySelector(".my-tasks");
+  let elemento = document.createElement("div");
+
+  elemento.className = "task";
+  elemento.style.backgroundColor = color;
+  pai.appendChild(elemento);
+}
+
+let selecionadoToggle = 0;
+function selecionaLegenda() {
+  let taskSelecionada = document.getElementsByClassName("task selected");
+  let taskNaoSelecionada = document.querySelector(".task");
+
+  taskNaoSelecionada.addEventListener("click", function (event) {
+    if (taskSelecionada.length === 0) {
+      event.target.className = "task selected";
+    } else {
+      event.target.className = "task";
+    }
+  });
+}
+
 createDaysOfTheWeek();
 createDaysOfMonth(); // exercicio 1
 criaBotaoFeriados("Feriados"); // exercicio 2
@@ -177,3 +200,9 @@ dia.addEventListener("mouseout", zoomOut);
 
 // exercicio 7
 adicionaTarefa("estudar");
+
+// exercicio 8
+adicionaLegenda("orange");
+
+// exercicio 9
+selecionaLegenda();
