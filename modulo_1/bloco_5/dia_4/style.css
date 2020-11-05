@@ -1,0 +1,41 @@
+.cabecalho {
+  text-align: center;
+}
+
+.conteudo-principal {
+    margin: 3%;
+}
+
+#texto {
+    text-align: justify;
+}
+
+.paragrafo {
+
+}
+
+.inputs {
+    display: block;
+    margin-bottom: 5px;
+}
+
+div{
+    display: inline-block;
+    margin-right: 5%;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+button{
+    margin-top: 5px;
+}
+
+.botao-centralizar{
+    margin-top: 50px;
+    text-align: center;
+}
+
+#resetar{
+    padding: 8px;
+    background-color: lightskyblue;
+}
