@@ -53,8 +53,8 @@ window.onload = function () {
   }
 
   function resetar() {
-      localStorage.clear();
-      window.location.reload();
+    localStorage.clear();
+    window.location.reload();
   }
 
   function chamaFuncoes() {
@@ -63,15 +63,14 @@ window.onload = function () {
     let botaoTrocaTamanhoFonte = document.querySelector("#alteraTamanhoFonte");
     let botaoTrocaEspacamento = document.querySelector("#alteraEspacamento");
     let botaoTrocaFonte = document.querySelector("#alteraFonte");
-    let botaoReseta = document.querySelector('#resetar');
+    let botaoReseta = document.querySelector("#resetar");
 
     botaoTrocaCor.addEventListener("click", trocaCor);
     botaoTrocaCorTexto.addEventListener("click", trocaCorTexto);
     botaoTrocaTamanhoFonte.addEventListener("click", trocaTamanhoFonte);
     botaoTrocaEspacamento.addEventListener("click", TrocaEspacamento);
     botaoTrocaFonte.addEventListener("click", trocaFonte);
-    botaoReseta.addEventListener('click', resetar)
-    
+    botaoReseta.addEventListener("click", resetar);
   }
 
   function setaValores() {
