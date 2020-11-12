@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco 6 dia 1</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Atividades Bloco 6 dia 1</h1>
+    </header>
+    <main>
+        <section class="forms">
+            <form action="" enctype="multipart/form-data">
+                <fieldset>
+                    <label for="input-name"> Nome:
+                        <input type="text" id="input-name" maxlength="40"  name="name">
+                    </label>
+                    <br>
+                    <label for="input-email">Email:
+                        <input type="email" id="input-email" maxlength="50"  name="email">
+                    </label>
+                    <br>
+                    <label for="input-cpf"> Cpf:
+                        <input type="text" id="input-cpf" maxlength="11"  name="cpf">
+                    </label>
+                    <br>
+                    <label for="input-address">Endereço:
+                        <input type="text" id="input-address" maxlength="200"  name="endereco">
+                    </label>
+                    <br>
+                    <label for="input-city">Cidade:
+                        <input type="text" id="input-city" malength="28"  name="city">
+                    </label>
+                    <br>
+                    <label for="input-state">Estado:
+                        <select name="states" id="input-state">
+                        </select>
+                    </label>
+                    <fieldset>
+                        <label for="ap-type">
+                            <input type="radio" name="type" id="ap-type" value="ap"> Apartamento
+                        </label>
+                        <label for="home-type">
+                            <input type="radio" name="type" id="home-type" value="home"> Casa
+                        </label>
+                    </fieldset>
+                </fieldset>
+                <fieldset id="last-job">
+                    <textarea name="resume" id="resume" cols="40" rows="20" placeholder="Resumo do currículo" maxlength="1000" ></textarea>
+                    <input type="text" name="description" id="descricao-cargo" placeholder="Digite a descrição do cargo" maxlength="500" >
+                    <input type="text" name="date-start" id="date-start" placeholder="data de início dd/mm/aaaa" >
+                </fieldset>
+                <button type="submit" id="btn-submit">Enviar</button>
+                <button id="btn-clear">Limpar</button>
+            </form>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
