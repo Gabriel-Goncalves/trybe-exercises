@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@media screen and (min-width: 280px) and (max-width: 500px) {
+  h1 {
+    text-align: center;
+    color: rgb(0, 51, 0);
+    font-size: 1.1em;
+  }
+  body {
+    background-color: rgb(217, 217, 217);
+    margin: 2% 2%;
+    width: 96%;
+  }
+  .main-content p {
+    font-size: 1em;
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 960px) {
+  h1 {
+    text-align: center;
+    color: rgb(0, 51, 0);
+    font-size: 1.5em;
+  }
+  body {
+    background-color: rgb(217, 217, 217);
+    margin: 5% 5%;
+    width: 90%;
+    text-align: justify;
+  }
+  .main-content p {
+    font-size: 1.15em;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  h1 {
+    text-align: center;
+    color: rgb(0, 51, 0);
+    font-size: 2.5em;
+  }
+  body {
+    background-color: rgb(255, 204, 153);
+    margin: 5% 15%;
+    width: 70%;
+    text-align: justify;
+  }
+  .main-content {
+    border: black solid 1px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+  .main-content p {
+    font-size: 1.15em;
+  }
+}
