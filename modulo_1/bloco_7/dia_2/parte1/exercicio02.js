@@ -34,14 +34,13 @@ const order = {
   },
 };
 
-const customerInfo = (order) => {
-  const deliveryPerson = order.order.delivery.deliveryPerson;
-  const name = order.name;
-  const phoneNumber = order.phoneNumber;
-  const street = order.address.street;
-  const number = order.address.number;
-  const apartment = order.address.apartment;
-  return `Olá ${deliveryPerson}, entrega para: ${name}, Telefone: ${phoneNumber}, R. ${street}, Nº: ${number}, AP: ${apartment}`;
+const orderModifier = (order) => {
+    order.payment.total = 50;
+    const deliveryPerson = order.order.delivery.deliveryPerson;
+    const typeDrink = order.order.drinks.coke.type;
+    const total = order.payment.total;
+    return `Olá ${deliveryPerson}, o total do seu pedido de muzzarella, calabresa e ${typeDrink} é R$ ${total.toFixed(2)}.`
+
 };
 
-console.log(customerInfo(order));
+console.log(orderModifier(order));
