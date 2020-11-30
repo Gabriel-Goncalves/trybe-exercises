@@ -73,7 +73,7 @@ function smallerName() {
       nameBook = element.name;
     }
   });
-  
+
   // Variável nameBook que receberá o valor do menor nome;
   return nameBook;
 }
