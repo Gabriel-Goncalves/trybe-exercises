@@ -1,0 +1,31 @@
+.poke-flex {
+  display: flex;
+  border: solid 1px #000000;
+  width: 40%;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  background-color: lightblue;
+}
+
+
+.div-pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  padding: 25px;
+  margin: 10px 20% 0 20%;
+  background-color: aqua;
+}
+
+.nav-header {
+  width: 100%;
+  text-align: center;
+  background-color: gray;
+  padding: 15px 0;
+}
+
+.nav-header h1 {
+  margin: 0;
+}
