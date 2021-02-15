@@ -1,0 +1,12 @@
+li {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+button {
+    padding: 6px 15px;
+    margin-left: 15px;
+    background-color: brown;
+    border: none;
+    color: white;
+}
