@@ -5,8 +5,17 @@ import GrandMother from "./GrandMother";
 function GreatGrandMother() {
   const [money, spend] = useState(100000);
 
+  const spendMoney = () => {
+    spend(money - 100);
+  } 
+
+  const context = {
+    money,
+    spendMoney, 
+  }
+
   return (
-    <MyContext.Provider value={money}>
+    <MyContext.Provider value={context}>
       <h1>Great Grand Mother</h1>
       <GrandMother />
     </MyContext.Provider>
