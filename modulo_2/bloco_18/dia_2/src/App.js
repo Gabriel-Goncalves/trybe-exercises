@@ -11,7 +11,7 @@ function App() {
       <br />
       <br />
       <br />
-      <h1>UseState</h1>
+      <h1>UseState Counter</h1>
       <Counter />
     </div>
   );
