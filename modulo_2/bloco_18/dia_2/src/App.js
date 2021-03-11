@@ -1,10 +1,11 @@
 import './App.css';
 import GreatGrandMother from './Components/GreatGrandMother';
+import Counter from './Components/Counter';
 
 function App() {
   return (
     <div className="App">
-      <GreatGrandMother />
+      <Counter />
     </div>
   );
 }
