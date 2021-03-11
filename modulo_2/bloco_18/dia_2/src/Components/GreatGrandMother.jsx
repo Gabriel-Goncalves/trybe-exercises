@@ -17,6 +17,7 @@ function GreatGrandMother() {
   return (
     <MyContext.Provider value={context}>
       <h1>Great Grand Mother</h1>
+      <button onClick={spendMoney}>GASTAR</button>
       <GrandMother />
     </MyContext.Provider>
   );
