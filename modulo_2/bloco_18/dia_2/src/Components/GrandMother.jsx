@@ -1,5 +1,5 @@
 import React from "react";
-import Father from "react";
+import Father from "./Father";
 
 export default function GrandMother() {
   return (
