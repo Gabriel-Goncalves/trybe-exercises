@@ -1,0 +1,2 @@
+use("sample");
+db.bios.find().limit(1).skip(5);
