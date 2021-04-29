@@ -1,0 +1,2 @@
+use("business");
+db.restaurants.find({$or: [{rating: {$gte: 6}}, {borough: "Brooklyn"}]}, {rating: 1, borough: 1}).count();
