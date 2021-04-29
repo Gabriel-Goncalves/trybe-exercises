@@ -1,0 +1,2 @@
+use("business");
+db.restaurants.find({}, {_id: 0,rating: 1, borough: 1}).sort({ "rating": 1 });
