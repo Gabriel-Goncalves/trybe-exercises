@@ -1,0 +1,2 @@
+use("class");
+db.movies.updateOne({title: "Godzilla"}, {$max: {imdbRating: 8.6}, $set: {"category.0": "thriller"}});
