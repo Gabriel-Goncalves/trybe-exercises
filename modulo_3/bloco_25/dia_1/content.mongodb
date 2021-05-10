@@ -1,0 +1,95 @@
+use("agg_example");
+// db.transactions.aggregate([{$group: {
+//   _id: "$bank",
+//   quant: {$sum: 1},
+// }}]);
+
+
+// db.transactions.aggregate([{$group: {
+//   _id: "$bank",
+//   totalValue: {$sum: "$value"},
+//   quant: {$sum: 1},
+// }}]);
+
+
+// db.transactions.aggregate([{$group: {
+//   _id: null,
+//   totalValue: {$sum: "$value"},
+// }}]);
+
+
+// db.transactions.aggregate([{$group: {
+//   _id: "$bank",
+//   totalValue: {$sum: "$value"},
+// }}, {$match: {totalValue: {$gte: 1000}}}]);
+
+// db.clients.insertMany([
+//   { name: "Dave America", State: "Florida" },
+//   { name: "Ned Flanders", State: "Alasca" },
+//   { name: "Mark Zuck", State: "Texas" },
+//   { name: "Edna Krabappel", State: "Montana" },
+//   { name: "Arnold Schuz", State: "California" },
+//   { name: "Lisa Simpson", State: "Florida" },
+//   { name: "Barney Gumble", State: "Texas" },
+//   { name: "Homer Simpson", State: "Florida" },
+// ]);
+
+// db.clients.aggregate([
+//   {
+//     /**
+//      * from: The target collection.
+//      * localField: The local join field.
+//      * foreignField: The target join field.
+//      * as: The name for the results.
+//      * pipeline: The pipeline to run on the joined collection.
+//      * let: Optional variables to use in the pipeline field stages.
+//      */
+//     $lookup: {
+//       from: "transactions",
+//       localField: "name",
+//       foreignField: "from",
+//       as: "clientMadeTransactions",
+//     }
+//   }
+// ]);
+
+
+// db.clients.aggregate([
+//   {
+//     /**
+//      * from: The target collection.
+//      * localField: The local join field.
+//      * foreignField: The target join field.
+//      * as: The name for the results.
+//      * pipeline: The pipeline to run on the joined collection.
+//      * let: Optional variables to use in the pipeline field stages.
+//      */
+//     $lookup: {
+//       from: "transactions",
+//       localField: "name",
+//       foreignField: "to",
+//       as: "clientReciveTransaction"
+//     }
+//   },
+//   {$limit: 4}
+// ]);
+
+
+
+// db.clients.aggregate([
+//   {$match: {State: "Florida"}},
+//   {/**
+//    * from: The target collection.
+//    * localField: The local join field.
+//    * foreignField: The target join field.
+//    * as: The name for the results.
+//    * pipeline: The pipeline to run on the joined collection.
+//    * let: Optional variables to use in the pipeline field stages.
+//    */
+//   $lookup: {
+//     from: 'transactions',
+//     localField: 'name',
+//     foreignField: 'to',
+//     as: 'ReciveTransactions'
+//   }}
+// ]);
