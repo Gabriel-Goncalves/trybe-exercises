@@ -1,0 +1,21 @@
+// download imports
+
+// realizar os mongoimport
+// mongoimport --db erp <caminho_do_arquivo_clientes.json>
+// mongoimport --db erp <caminho_do_arquivo_produtos.json>
+// mongoimport --db erp <caminho_do_arquivo_vendas.json>
+
+// use("erp");
+// db.clientes.count(); // 499
+// db.produtos.count(); // 499
+// db.vendas.count(); // 4900
+
+use("erp");
+db.clientes.aggregate([
+  {
+    $match: 
+      {
+        "sexo": "MASCULINO"
+      }
+  }
+]);

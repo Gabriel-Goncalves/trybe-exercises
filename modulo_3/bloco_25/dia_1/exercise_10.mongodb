@@ -1,0 +1,29 @@
+use("erp");
+db.vendas.find();
+db.vendas.aggregate([
+  {
+    /**
+     * _id: The id of the group.
+     * fieldN: The first field name.
+     */
+    $group: {
+      _id: "$clienteId",
+      totalDeCompras: {
+        $sum: 1,
+      }
+    }
+  },
+  {$match: {
+    totalDeCompras: {$gt: 5}
+  }},
+  /**
+   * _id: The id of the group.
+   * fieldN: The first field name.
+   */
+  {$group: {
+    _id: null,
+    clientes: {
+      $sum: 1
+    }
+  }}
+])
