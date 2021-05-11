@@ -1,0 +1,22 @@
+use("erp");
+// db.clientes.find();
+db.clientes.aggregate([
+  {
+    /**
+     * specifications: The fields to
+     *   include or exclude.
+     */
+    $project: {
+      _id: 0,
+      nome: 1,
+      idade: {
+        $floor: {
+          $divide: [
+            { $subtract: ["$$NOW", "$dataNascimento"] },
+            { $multiply: [86400000, 365] },
+          ],
+        },
+      },
+    },
+  },
+]);
