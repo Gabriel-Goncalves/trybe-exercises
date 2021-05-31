@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 
-const Author = require('./models/Author');
+const Author = require('./services/Author');
 const Books = require('./models/Books');
 
 app.use(bodyParser.json());
@@ -34,11 +34,11 @@ app.get("/books", async (req, res) => {
 
 app.post('/authors', async (req, res) => {
   const {first_name, middle_name, last_name} = req.body;
+  const author = await Author.create(first_name, middle_name, last_name);
 
-  if(!Author.isValid(first_name, middle_name, last_name)) return res.status(400).json({message: "not valid dates"});
+  if(!author) return res.status(400).json({message: "not valid dates"});
 
-  await Author.createAuthor(first_name, middle_name, last_name);
-  res.status(201).json({message: "author created with success"})
+  res.status(201).json(author)
 })
 
 
