@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "gabriel",
-    "password": "pranchana",
+    "password": "senha aqui",
     "database": "associations",
     "host": "127.0.0.1",
     "dialect": "mysql"
